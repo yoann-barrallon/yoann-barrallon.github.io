@@ -38,7 +38,8 @@ export default function Contact() {
           <button onClick={handleCopy}>
             <a
               href="mailto:yoann.barrallon0@gmail.com"
-              className="inline-flex items-center px-8 py-4 bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors"
+              onClick={handleCopy}
+              className="inline-flex items-center w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-4 bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors break-all justify-center"
             >
               <span className="mr-3">📨</span>
               {copied ? "Email copié !" : "yoann.barrallon0@gmail.com"}
