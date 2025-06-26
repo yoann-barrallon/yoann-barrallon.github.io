@@ -6,6 +6,7 @@ const experiences = [
     period: "2024 - Présent",
     description: "Développement d'applications métiers avec WinDev.",
     achievements: ["Ajouts de nouveaux modules", "Maintenance d'applications"],
+    link: "https://www.iieess.fr/",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const experiences = [
     period: "avril 2024 - juin 2024",
     description: "Création d'un module de charge de travail",
     achievements: ["Développement d'un module de charge de travail"],
+    link: "https://www.diagram.fr/",
   },
 ];
 
@@ -36,9 +38,14 @@ export default function Experience() {
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                     {exp.title}
                   </h3>
-                  <p className="text-emerald-600 dark:text-emerald-400 font-medium text-lg">
+                  <a
+                    href={exp.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 dark:text-emerald-400 font-medium text-lg hover:underline hover:text-emerald-700 dark:hover:text-emerald-300 "
+                  >
                     {exp.company}
-                  </p>
+                  </a>
                 </div>
                 <span className="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">
                   {exp.period}

@@ -42,6 +42,27 @@ const skillIcons = {
   Linux: <FaLinux size={24} />,
 };
 
+const skillsLinks = {
+  ReactJS: "https://react.dev/",
+  Laravel: "https://laravel.com/",
+  InertiaJS: "https://inertiajs.com/",
+  "Tailwind CSS": "https://tailwindcss.com/",
+  PHP: "https://www.php.net/",
+  "Typescript/Javascript": "https://www.typescriptlang.org/",
+  CSS: "https://developer.mozilla.org/fr/docs/Web/CSS",
+  Java: "https://www.java.com/",
+  MySQL: "https://www.mysql.com/",
+  PostgreSQL: "https://www.postgresql.org/",
+  Git: "https://git-scm.com/",
+  Docker: "https://www.docker.com/",
+  "VS Code": "https://code.visualstudio.com/",
+  "Suite Jetbrains": "https://www.jetbrains.com/",
+  Windows: "https://www.microsoft.com/fr-fr/windows",
+  Linux: "https://www.linux.org/",
+  WinDev: "https://www.windev.fr/",
+  SQL: "https://www.sql.sh/",
+};
+
 export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-white dark:bg-slate-900">
@@ -66,9 +87,14 @@ export default function Skills() {
                     className="bg-white dark:bg-slate-700 px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center gap-2"
                   >
                     {skillIcons[skill] && <span>{skillIcons[skill]}</span>}
-                    <span className="text-gray-700 dark:text-gray-300 font-medium">
+                    <a
+                      href={skillsLinks[skill]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 dark:text-gray-300 font-medium hover:underline hover:text-emerald-700 dark:hover:text-emerald-300"
+                    >
                       {skill}
-                    </span>
+                    </a>
                   </div>
                 ))}
               </div>
