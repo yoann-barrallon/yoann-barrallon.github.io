@@ -41,6 +41,23 @@ export default function About() {
                 )
               )}
             </div>
+
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                Parcours académique
+              </h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                <li>
+                  <span className="font-medium">2022 - 2025 :</span> BUT
+                  Informatique parcours conception d'applications, IUT de
+                  Valence (26)
+                </li>
+                <li>
+                  <span className="font-medium">2022 :</span> Baccalauréat
+                  général, Lycée Saint-Denis, Annonay (07)
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

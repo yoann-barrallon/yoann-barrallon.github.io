@@ -5,10 +5,7 @@ const experiences = [
     company: "IIEESS",
     period: "2024 - Présent",
     description: "Développement d'applications métiers avec WinDev.",
-    achievements: [
-      "Ajouts de nouveaux modules",
-      "Maintenance de l'application",
-    ],
+    achievements: ["Ajouts de nouveaux modules", "Maintenance d'applications"],
   },
   {
     id: 2,
@@ -16,7 +13,7 @@ const experiences = [
     company: "Diagram Informatique",
     period: "avril 2024 - juin 2024",
     description: "Création d'un module de charge de travail",
-    achievements: ["Développement d'un module de charge de travail", "ttt"],
+    achievements: ["Développement d'un module de charge de travail"],
   },
 ];
 
