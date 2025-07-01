@@ -35,16 +35,27 @@ export default function Contact() {
             </p>
           </div>
 
-          <button onClick={handleCopy}>
-            <a
-              href="mailto:yoann.barrallon0@gmail.com"
+          <div className="relative flex justify-center">
+            <button
               onClick={handleCopy}
-              className="inline-flex items-center w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-4 bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors break-all justify-center"
+              className="inline-flex items-center w-full max-w-xs sm:max-w-none sm:w-auto px-4 py-2 sm:px-8 sm:py-4 bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors justify-center"
+              style={{ minWidth: "min(280px, 100%)" }}
             >
               <span className="mr-3">📨</span>
-              {copied ? "Email copié !" : "yoann.barrallon0@gmail.com"}
+              <span className="truncate">yoann.barrallon0@gmail.com</span>
+            </button>
+
+            {copied && (
+              <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg">
+                <span className="mr-3">✅</span>
+                Email copié !
+              </div>
+            )}
+
+            <a href="mailto:yoann.barrallon0@gmail.com" className="hidden">
+              Email
             </a>
-          </button>
+          </div>
         </div>
       </div>
     </section>

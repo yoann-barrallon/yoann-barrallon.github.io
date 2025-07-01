@@ -14,6 +14,7 @@ import {
 } from "react-icons/si";
 import { FaWindows, FaLinux, FaJava } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
+import { TbSql } from "react-icons/tb";
 
 const skillsData = {
   Langages: ["Typescript/Javascript", "PHP", "CSS", "Java", "SQL", "WinDev"],
@@ -31,7 +32,7 @@ const skillIcons = {
   "Typescript/Javascript": <SiJavascript size={24} />,
   CSS: <SiCss3 size={24} />,
   Java: <FaJava size={24} />,
-  SQL: <SiMysql size={24} />,
+  SQL: <TbSql size={24} />,
   PostgreSQL: <SiPostgresql size={24} />,
   MySQL: <SiMysql size={24} />,
   Git: <SiGit size={24} />,
