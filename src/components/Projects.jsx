@@ -9,6 +9,8 @@ const projects = [
     github: "#",
     demo: "#",
     image: "💼",
+    demoDisabled: true,
+    githubDisabled: true,
   },
   {
     id: 2,
@@ -16,9 +18,11 @@ const projects = [
     description:
       "Application de gestion de stock open source. Elle permet de gérer les stocks et commandes.",
     technologies: ["Laravel", "ReactJS", "PostgreSQL"],
-    github: "https://github.com/yoann-barrallon/gestion-stock",
+    github: "https://github.com/yoann-barrallon/inventory-management",
     demo: "https://gestion-stock.yoann-barrallon.fr",
     image: "📊",
+    demoDisabled: true,
+    githubDisabled: false,
   },
 ];
 
@@ -60,18 +64,22 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-3">
+                  {!project.githubDisabled ? (
                   <a
                     href={project.github}
                     className="flex-1 px-4 py-2 border border-emerald-600 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 rounded-lg hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-400 dark:hover:text-gray-900 transition-colors text-center font-medium"
                   >
                     Code
                   </a>
+                  ) : null}
+                  {!project.demoDisabled ? (
                   <a
                     href={project.demo}
                     className="flex-1 px-4 py-2 bg-emerald-600 dark:bg-emerald-500 text-white rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors text-center font-medium"
                   >
                     Demo
                   </a>
+                  ) : null}
                 </div>
               </div>
             </div>

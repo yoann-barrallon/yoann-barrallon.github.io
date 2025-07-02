@@ -7,7 +7,7 @@ export default function Contact() {
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Message disparaît après 2s
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -35,7 +35,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="relative flex justify-center">
+          <div className="flex justify-center">
             <button
               onClick={handleCopy}
               className="inline-flex items-center w-full max-w-xs sm:max-w-none sm:w-auto px-4 py-2 sm:px-8 sm:py-4 bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors justify-center"
@@ -45,17 +45,20 @@ export default function Contact() {
               <span className="truncate">yoann.barrallon0@gmail.com</span>
             </button>
 
-            {copied && (
-              <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-emerald-600 dark:bg-emerald-500 text-white text-lg font-medium rounded-lg">
-                <span className="mr-3">✅</span>
-                Email copié !
-              </div>
-            )}
-
             <a href="mailto:yoann.barrallon0@gmail.com" className="hidden">
               Email
             </a>
           </div>
+
+        {/* Toast de confirmation */}
+        {copied && (
+          <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-emerald-600 dark:bg-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce">
+            <div className="flex items-center">
+              <span className="mr-3">✅</span>
+              Email copié dans le presse-papiers !
+            </div>
+          </div>
+        )}
         </div>
       </div>
     </section>
