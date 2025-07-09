@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const email = "yoann.barrallon0@gmail.com";
+  const email = "contact@yoannbarrallon.fr";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -42,10 +42,10 @@ export default function Contact() {
               style={{ minWidth: "min(280px, 100%)" }}
             >
               <span className="mr-3">📨</span>
-              <span className="truncate">yoann.barrallon0@gmail.com</span>
+              <span className="truncate">{email}</span>
             </button>
 
-            <a href="mailto:yoann.barrallon0@gmail.com" className="hidden">
+            <a href={`mailto:${email}`} className="hidden">
               Email
             </a>
           </div>
